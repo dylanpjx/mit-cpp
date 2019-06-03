@@ -1,0 +1,8 @@
+1. If the constructors were private, the other classes would not be able to create Point objects, which are the basic building blocks of Polygon(s). That would mean that none of the other classes would be useable as well.
+
+2. When the Polygon object is destroyed, the static int count is decremented, and the PointArray field is implicitly deleted. (Destructor is automatically called when Polygon object is destroyed.)
+https://www.geeksforgeeks.org/possible-call-constructor-destructor-explicitly/
+
+3. Protected keyword is similar to private, besides that the fields in protected can be accessed by subclasses as well. Polygon is an abstract class, with subclasses Rectangle and Triangle. These subclasses need to access the same fields as Polygon and thus the fields are protected.
+
+4. Polygon getNumSides would be called. The function is not virtual.
